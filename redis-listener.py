@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask, jsonify, abort, make_response, request
-import sdcp.devices.appformix as applib
+import common.common.appformix as applib
 import json
 import logging
 import redis
@@ -82,7 +82,7 @@ def vrouter_flow_count():
         if description == vRouter_not_reachable:
             setvalues = {"vRouter_not_reachable":"no"}
             redis_db.hmset(entityId, setvalues)
-            
+
             print 'Alarm from server ' + entityId + ' is set to  ' + alarmstate
             print 'New state for key vRouter_not-reachable alarm is set to ' + str(redis_db.hmget(entityId, "vRouter_not_reachable"))
             print 'New state for key no_flow alarm is set to ' + str(redis_db.hmget(entityId, "no_flow"))
@@ -90,7 +90,7 @@ def vrouter_flow_count():
         elif description == vrouter_no_flow:
             setvalues = {"no_flow":"no"}
             redis_db.hmset(entityId, setvalues)
-            
+
             print 'Alarm from server ' + entityId + ' is set to  ' + alarmstate
             print 'New state for key vRouter_not-reachable alarm is set to ' + str(redis_db.hmget(entityId, "vRouter_not_reachable"))
             print 'New state for key no_flow alarm is set to ' + str(redis_db.hmget(entityId, "no_flow"))
