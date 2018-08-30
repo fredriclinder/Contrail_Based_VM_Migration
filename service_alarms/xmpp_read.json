@@ -1,0 +1,18 @@
+{
+  "ProcessSetMonitorId": "",
+  "AggregationFunction": "value",
+  "ComparisonFunction": "equal",
+  "CreatedBy": "user",
+  "DisplayEvent": true,
+  "EventRuleType": "static",
+  "EventRuleScope": "infrastructure",
+  "MetricScope": "xmpp_peer",
+  "MetricType": "contrail.xmpp_peer.tx_update_stats.reachable",
+  "Mode": "alert",
+  "Module": "service_alarms",
+  "Name": "XMPP_checker",
+  "ObjectList": [
+    "all"
+  ],
+  "ServiceType": "contrail"
+}

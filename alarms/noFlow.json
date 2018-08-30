@@ -1,0 +1,19 @@
+{
+  "IntervalDuration": "60s",
+  "Severity": "warning",
+  "Module": "alarms",
+  "Status": "enabled",
+  "ComputeMultipleBaselines": false,
+  "IntervalCount": 1,
+  "EventRuleType": "static",
+  "IntervalsWithException": 1,
+  "Name": "noFLOW",
+  "DisplayEvent": true,
+  "ComparisonFunction": "equal",
+  "EventRuleScope": "infrastructure",
+  "AggregationFunction": "average",
+  "MetricType": "plugin.contrail.vrouter.flow_rate_active_flows",
+  "CreatedBy": "user",
+  "Threshold": 0,
+  "Mode": "alert"
+}
